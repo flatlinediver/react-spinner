@@ -1,0 +1,7 @@
+/coverage
+.gitignore
+.vscode/
+/node_modules
+/demo
+.DS_Store
+/lib
