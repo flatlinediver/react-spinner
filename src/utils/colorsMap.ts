@@ -5,6 +5,7 @@ import { CleanProps } from "types";
 
 const colorsCheck = (colors: string[]) => {
     const findInvalid: string | undefined = colors.find((c: string) => {
+        if(Option === undefined) return c
         const s = new Option().style;
         s.color = c;
         return s.color === '';
