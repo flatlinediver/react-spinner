@@ -11,7 +11,7 @@ const colorsCheck = (colors: string[]) => {
             s.color = c;
             temp = s.color
         }
-        return temp;
+        return temp === '';
     });
     if(findInvalid !== undefined) raiseError('colors', JSON.stringify(colors));
 
