@@ -4,16 +4,13 @@ import { CleanProps } from "types";
 
 
 const colorsCheck = (colors: string[]) => {
-    const findInvalid: string | undefined = colors.find((c: string) => {
-        let temp: string | null = 'temp'
-        if(!!Option) {
-            const s = new Option().style;
-            s.color = c;
-            temp = s.color
-        }
-        return temp === '';
-    });
-    if(findInvalid !== undefined) raiseError('colors', JSON.stringify(colors));
+    // TODO: make Option compatible with NextJs
+    // const findInvalid: string | undefined = colors.find((c: string) => {
+    //     const s = new Option().style;
+    //     s.color = c;
+    //     return s.color === '';
+    // });
+    // if(findInvalid !== undefined) raiseError('colors', JSON.stringify(colors));
 
     if(colors.length > 4) {
         raiseWarn('if colors length is greater then 4, only 4 values are used.');
