@@ -5,12 +5,13 @@ import { CleanProps } from "types";
 
 const colorsCheck = (colors: string[]) => {
     const findInvalid: string | undefined = colors.find((c: string) => {
-        let s = {color: 'placeholder'}
-        if(Option !== undefined) {
-            s = new Option().style;
+        let temp: string | null = 'temp'
+        if(!!Option) {
+            const s = new Option().style;
             s.color = c;
+            temp = s.color
         }
-        return s.color === '';
+        return temp;
     });
     if(findInvalid !== undefined) raiseError('colors', JSON.stringify(colors));
 
