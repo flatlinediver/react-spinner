@@ -2,8 +2,13 @@ import React, { FC, useContext, createContext } from 'react';
 import { Circle, Svg, Container } from './style';
 import { SpinnerProps } from './types';
 import {propsCleaning} from './utils';
+import { DEFAULT_PROPS } from './utils/constants';
+export { DEFAULT_PROPS as DEFAULT_SPINNER_VALUES } from './utils/constants';
   
-export const SpinnerContext = createContext<SpinnerProps>({});
+// Deprecated
+export const SpinnerContext = createContext<SpinnerProps>(DEFAULT_PROPS);
+
+export const SpinnerProvider = SpinnerContext.Provider;
 
 const Spinner: FC<SpinnerProps> = (props: SpinnerProps) => {
     const theme = useContext(SpinnerContext);

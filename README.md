@@ -77,17 +77,17 @@ export default = () => (
 
 <br />
 
-### Example with Spinner context (Overridden by Spinner props)
+### Example with Spinner Context Provider (Overridden by Spinner props)
 
 [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 
 ```js
 import React from 'react';
-import Spinner, {SpinnerContext} from '@flatlinediver/react-spinner';
+import Spinner, {SpinnerProvider} from '@flatlinediver/react-spinner';
 const LazyComponent = lazy(() => import('./lazy-component'));
 
 export default = () => (
-    <SpinnerContext.Provider value={{
+    <SpinnerProvider value={{
         position: 'fixed',
         center: true,
         colors: ['papayawhip', 'palevioletred'],
@@ -101,11 +101,17 @@ export default = () => (
         }>
             <LazyComponent />
         </Suspense>
-    </SpinnerContext.Provider>
+    </SpinnerProvider>
 )
 ```
 
 <br />
+
+### Available imports
+- `ReactSpinner` - main Spinner component
+- `SpinnerProvider` - Spinner context Provider
+- `DEFAULT_SPINNER_VALUES` - Spinner default values
+- `SpinnerContext` - `Depreciated`  Spinner context Provider (will be removed in the next release)
 
 ### Available props
 

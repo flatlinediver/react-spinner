@@ -28,9 +28,9 @@
     "test:coverage": "jest --coverage"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "styled-components": "^5.0.1"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "styled-components": ">= 5.0.1"
   },
   "optionalDependencies": {
     "@types/jest": "^24.0.0",

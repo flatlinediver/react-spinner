@@ -21,7 +21,8 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   externals: {
-    react: "react",
+    "react": "react",
+    "react-dom": "react-dom",
     "styled-components": {
       commonjs: "styled-components",
       commonjs2: "styled-components",
