@@ -6,20 +6,10 @@ import {
     sizeMap,
     positionMap,
     colorsMap,
-    propsMap,
-    speedMap
+    speedMap,
+    thickEdgesMap
 } from '../utils';
 
-export const propsCleaning = (props: SpinnerProps, theme: SpinnerProps | null): CleanProps => {
-    let returnedProps: CleanProps;
-    let cleanProps: any;
-
-    cleanProps = propsMap(props, theme, cleanProps);
-    cleanProps = sizeMap(cleanProps);
-    cleanProps = speedMap(cleanProps);
-    cleanProps = positionMap(cleanProps);
-    cleanProps = colorsMap(cleanProps);
-
-    returnedProps = cleanProps;
-    return returnedProps;
+export const propsCleaning = (props: SpinnerProps): CleanProps => {
+    return thickEdgesMap( colorsMap( positionMap( speedMap( sizeMap(props) ) ) ) );
 };

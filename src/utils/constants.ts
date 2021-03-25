@@ -1,18 +1,5 @@
 import { DefaultProps, SpeedsOptions } from '../types';
 
-export const USER_PROPS = [
-    'position',
-    'center',
-    'top',
-    'bottom',
-    'left',
-    'right',
-    'colors',
-    'speed',
-    'size',
-    'thick',
-    'edges'
-];
 export const DEFAULT_PROPS: DefaultProps = {
     position: 'static',
     center: false,

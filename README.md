@@ -111,7 +111,7 @@ export default = () => (
 - `ReactSpinner` - main Spinner component
 - `SpinnerProvider` - Spinner context Provider
 - `DEFAULT_SPINNER_VALUES` - Spinner default values
-- `SpinnerContext` - `Depreciated`  Spinner context Provider (will be removed in the next release)
+- `SpinnerContext` - `Deprecated`  Spinner context Provider (will be removed in the next release)
 
 ### Available props
 

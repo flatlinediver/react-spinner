@@ -1,11 +1,15 @@
 import { SPEEDS } from "./constants";
-import { SpeedsOptions } from "types";
+import { Speed, SpeedsOptions } from "types";
+import {SizeMapReturn} from './sizeMap';
 import raiseError from "./raiseError";
 
-export const speedMap = (cleanProps: any) => {
-    if(!SPEEDS[cleanProps.speed as keyof SpeedsOptions]) raiseError('speed', cleanProps.speed);
+export interface SpeedMapReturn extends Omit<SizeMapReturn, "speed">, Speed {};
 
-    cleanProps.speed = SPEEDS[cleanProps.speed as keyof SpeedsOptions];
+export const speedMap = (props: SizeMapReturn): SpeedMapReturn => {
+    if(!SPEEDS[props.speed as keyof SpeedsOptions]) raiseError('speed', `${props.speed}`);
 
-    return cleanProps;
+    return {
+        ...props,
+        speed: SPEEDS[props.speed as keyof SpeedsOptions]
+    };
 };

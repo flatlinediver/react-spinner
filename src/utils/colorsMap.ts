@@ -1,17 +1,14 @@
-// import raiseError from "./raiseError";
 import raiseWarn from './raiseWarn';
-import { CleanProps } from "types";
+import { Color } from "types";
+import { PositionMapReturn } from './positionMap';
+import raiseError from './raiseError';
 
+export interface ColorsMapReturn extends
+    Omit<PositionMapReturn, "colors">,
+    Color
+{};
 
 const colorsCheck = (colors: string[]) => {
-    // TODO: make Option compatible with NextJs
-    // const findInvalid: string | undefined = colors.find((c: string) => {
-    //     const s = new Option().style;
-    //     s.color = c;
-    //     return s.color === '';
-    // });
-    // if(findInvalid !== undefined) raiseError('colors', JSON.stringify(colors));
-
     if(colors.length > 4) {
         raiseWarn('if colors length is greater then 4, only 4 values are used.');
         colors.length = 4;
@@ -19,12 +16,18 @@ const colorsCheck = (colors: string[]) => {
     return colors;
 };
 
-export const colorsMap = (cleanProps: CleanProps) => {
-    let colors;
-    !Array.isArray(cleanProps.colors)
-     ? colors = [cleanProps.colors]
-     : colors = cleanProps.colors;
-    cleanProps.colors = colorsCheck(colors);
+export const colorsMap = (props: PositionMapReturn): ColorsMapReturn => {
+    if(!props.colors) {
+        return raiseError('colors', `${props.colors}`);
+    }
 
-    return cleanProps;
+    let colors;
+    !Array.isArray(props.colors)
+     ? colors = [props.colors]
+     : colors = props.colors;
+
+    return {
+        ...props,
+        colors: colorsCheck(colors)
+    };
 };

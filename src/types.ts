@@ -3,6 +3,8 @@ export interface Colors { colors: string[] | string; };
 export interface SpeedsOptions { slow: number; normal: number; fast: number };
 export interface Speeds { speed: 'slow' | 'normal' | 'fast' };
 export interface Speed { speed: number; };
+export interface SizeWithBorder { sizeWithBorder: number; };
+export interface Color { colors: string[] };
 
 export interface Look {
     thick: boolean;
@@ -31,8 +33,7 @@ export interface CleanProps extends
     Position,
     Look,
     Size,
-    Speed
-{
-    sizeWithBorder: number;
-    colors: string[];
-};
+    Speed,
+    SizeWithBorder,
+    Color
+{};

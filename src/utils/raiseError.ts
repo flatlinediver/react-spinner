@@ -2,7 +2,15 @@ export const correctValues: any = {
     speed: "'slow' | 'normal' | 'fast'",
     size: "number",
     position: "'absolute' | 'fixed' | 'static'",
-    colors: "string or array of strings with browsers supported color value"
+    colors: "string or array of strings with browsers supported color value",
+    top: "string or 0",
+    right: "string or 0",
+    bottom: "string or 0",
+    left: "string or 0",
+    center: "boolean",
+    thick: "boolean",
+    edges: "'round' | 'square'",
+
 };
 
 export default (prop: string, value: string) => {

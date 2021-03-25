@@ -25,7 +25,8 @@ const Spinner: FC<SpinnerProps> = (props: SpinnerProps) => {
         thick,
         edges,
         sizeWithBorder
-    } = propsCleaning(props, theme);
+    } = propsCleaning({...DEFAULT_PROPS, ...theme, ...props});
+
     return (
         <Container
             data-testid="spinner"
