@@ -20,8 +20,7 @@ export const dash = (size: number) => keyframes`
 `;
 
 export const colorsAnimation = (colors: string[]) => keyframes`
-    ${colors.map((c: string, i: number) => i === 0
-    ? `100%, 0% { stroke: ${c}; }`
-    : `${ 100 / colors.length  * i}% { stroke: ${c}; }`
+    ${colors.map((c: string, i: number) =>
+      i === 0 ? `100%, 0% { stroke: ${c}; }` : `${(100 / colors.length) * i}% { stroke: ${c}; }`
     )};
 `;

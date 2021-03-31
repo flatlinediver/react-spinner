@@ -1,12 +1,12 @@
-import React from 'react'
-import { render, cleanup } from '@testing-library/react'
-import Spinner from '../index'
+import React from 'react';
+import { render, cleanup } from '@testing-library/react';
+import Spinner from '../index';
 
-afterEach(cleanup)
+afterEach(cleanup);
 
 describe('Spinner render', () => {
-    it('renders spinner correctly', () => {
-        const { queryByTestId } = render(<Spinner />);
-        expect(queryByTestId('spinner')).toBeTruthy();
-    });
+  it('renders spinner correctly', () => {
+    const { queryByTestId } = render(<Spinner />);
+    expect(queryByTestId('spinner')).toBeTruthy();
+  });
 });

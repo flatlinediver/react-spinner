@@ -1,68 +1,21 @@
-import React, { FC, useContext, createContext } from 'react';
-import { Circle, Svg, Container } from './style';
-import { SpinnerProps } from './types';
-import {propsCleaning} from './utils';
-import { DEFAULT_PROPS } from './utils/constants';
-export { DEFAULT_PROPS as DEFAULT_SPINNER_VALUES } from './utils/constants';
-  
+import React, { FC } from 'react';
+import { propsCleaning } from 'utils';
+import { Store, StoreProvider, useStore } from 'store';
+import { Spinner as SpinnerSvg } from 'presentation';
+import { SpinnerProps } from 'types';
+import { CONSTANTS } from 'helpers';
+
+export const DEFAULT_SPINNER_VALUES = CONSTANTS.DEFAULT_PROPS;
+
 // Deprecated
-export const SpinnerContext = createContext<SpinnerProps>(DEFAULT_PROPS);
+export const SpinnerContext = Store;
 
-export const SpinnerProvider = SpinnerContext.Provider;
+export const SpinnerProvider = StoreProvider;
 
-const Spinner: FC<SpinnerProps> = (props: SpinnerProps) => {
-    const theme = useContext(SpinnerContext);
-    let {
-        position,
-        center,
-        top,
-        bottom,
-        left,
-        right,
-        colors,
-        speed,
-        size,
-        thick,
-        edges,
-        sizeWithBorder
-    } = propsCleaning({...DEFAULT_PROPS, ...theme, ...props});
+const Spinner: FC<SpinnerProps> = (props) => {
+  const theme = useStore();
 
-    return (
-        <Container
-            data-testid="spinner"
-            position={position}
-            top={top}
-            bottom={bottom}
-            left={left}
-            right={right}
-            center={center}
-            size={size}
-            aria-busy="true"
-        >
-            <Svg
-                data-testid="svg"
-                speed={speed}
-                viewBox={`0 0 ${sizeWithBorder} ${sizeWithBorder}`}
-                role="progressbar"
-            >
-                <Circle
-                    data-testid="circle"
-                    speed={speed}
-                    colors={colors}
-                    size={size}
-                    cx={ sizeWithBorder / 2 }
-                    cy={ sizeWithBorder / 2 }
-                    r={ size / 2 }
-                    fill="none"
-                    strokeWidth={sizeWithBorder / (thick ? 8 : 16)}
-                    strokeMiterlimit="10"
-                    strokeLinecap={edges}
-                    strokeDasharray={`1, ${size} * 6`}
-                    strokeDashoffset={0}
-                />
-            </Svg>
-        </Container>
-    );
+  return <SpinnerSvg {...propsCleaning({ ...CONSTANTS.DEFAULT_PROPS, ...theme, ...props })} />;
 };
 
 export default Spinner;
