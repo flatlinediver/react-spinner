@@ -1,5 +1,5 @@
-import { CONSTANTS, raiseError } from 'helpers';
-import { Speed, SpeedsOptions } from 'types';
+import { CONSTANTS, raiseError } from '@helpers';
+import { Speed, SpeedsOptions } from '@types';
 import { SizeMapReturn } from './sizeMap';
 
 export interface SpeedMapReturn extends Omit<SizeMapReturn, 'speed'>, Speed {}

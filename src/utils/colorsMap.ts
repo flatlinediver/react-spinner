@@ -1,5 +1,5 @@
-import { raiseWarn, raiseError } from 'helpers';
-import { Color } from 'types';
+import { raiseWarn, raiseError } from '@helpers';
+import { Color } from '@types';
 import { PositionMapReturn } from './positionMap';
 
 export interface ColorsMapReturn extends Omit<PositionMapReturn, 'colors'>, Color {}

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Wrapper, Speed, Ring } from 'types';
+import { Wrapper, Speed, Ring } from '@types';
 import { rotate, dash, colorsAnimation } from './animations';
 
 export const Container = styled.div<Wrapper>`
@@ -10,7 +10,7 @@ export const Container = styled.div<Wrapper>`
   right: ${({ right }) => right};
   width: ${({ size }) => size + 'px'};
   height: ${({ size }) => size + 'px'};
-  transform: ${({ center }) => center && 'translate(-50%, -50%)'};
+  transform: ${({ center, position }) => center && position !== 'fixed' && 'translate(-50%, -50%)'};
   display: flex;
   align-items: center;
   justify-content: center;

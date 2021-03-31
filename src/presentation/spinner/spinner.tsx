@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { CleanProps } from 'types';
+import { CleanProps } from '@types';
 import { Circle, Svg, Container } from './style';
 
 const Spinner: FC<CleanProps> = ({

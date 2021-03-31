@@ -1,5 +1,5 @@
-import { Size, SizeWithBorder, SpinnerProps } from 'types';
-import { raiseError } from 'helpers';
+import { Size, SizeWithBorder, SpinnerProps } from '@types';
+import { raiseError } from '@helpers';
 
 export interface SizeMapReturn extends Omit<SpinnerProps, 'size'>, SizeWithBorder, Size {}
 
