@@ -87,15 +87,15 @@ import Spinner, {SpinnerProvider} from '@flatlinediver/react-spinner';
 const LazyComponent = lazy(() => import('./lazy-component'));
 
 export default = () => (
-    <SpinnerProvider value={{
-        position: 'fixed',
-        center: true,
-        colors: ['papayawhip', 'palevioletred'],
-        speed: 'fast',
-        size: 40,
-        thick: true,
-        edges: 'square'
-    }}>
+    <SpinnerProvider
+        position = 'fixed'
+        center
+        colors = {['papayawhip', 'palevioletred']}
+        speed = 'fast'
+        size = {40}
+        thick
+        edges = 'square'
+    >
         <Suspense fallback={
             <Spinner speed='slow' />
         }>
