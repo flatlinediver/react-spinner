@@ -1,4 +1,4 @@
-import propsMaps from '../../propsMaps';
+import propsMap from '../../propsMap';
 import React, { FC } from 'react';
 import { CleanProps, SpinnerProps } from '../../types';
 import { Circle, Svg, Container } from './style';
@@ -17,7 +17,7 @@ const Spinner: FC<{ props: SpinnerProps }> = ({ props }) => {
     thick,
     edges,
   }: CleanProps = {
-    ...propsMaps(props),
+    ...propsMap(props),
   };
 
   let newSize = parseInt(`${size}`);
