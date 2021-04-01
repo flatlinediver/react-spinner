@@ -1,6 +1,6 @@
 /coverage
 .gitignore
-.vscode/
+.vscode/settings.json
 /node_modules
 /demo
 .DS_Store
