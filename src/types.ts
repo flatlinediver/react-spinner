@@ -1,12 +1,31 @@
+type Unit =
+  | 'cm'
+  | 'mm'
+  | 'in'
+  | 'px'
+  | 'pt'
+  | 'pc'
+  | 'em'
+  | 'ex'
+  | 'ch'
+  | 'rem'
+  | 'vw'
+  | 'vh'
+  | 'vmin'
+  | 'vmax'
+  | '%';
+
+type Alignment = 0 | 'auto' | `${number}${Unit}`;
+
 export type Thickness = boolean;
 export type Edges = 'round' | 'square';
 export type Size = number;
 export type Position = 'absolute' | 'fixed' | 'static';
 export type Center = boolean;
-export type Top = string | 0;
-export type Bottom = string | 0;
-export type Right = string | 0;
-export type Left = string | 0;
+export type Top = Alignment;
+export type Bottom = Alignment;
+export type Right = Alignment;
+export type Left = Alignment;
 export type ColorsI = string[] | string;
 export type SpeedI = 'slow' | 'normal' | 'fast';
 export type ColorsO = string[];
