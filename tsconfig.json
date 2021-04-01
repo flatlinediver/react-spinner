@@ -10,13 +10,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "paths": {
-      "@helpers": ["./helpers"],
-      "@utils": ["./utils"],
-      "@presentation": ["./presentation"],
-      "@store": ["./store"],
-      "@types": ["./types"],
-    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

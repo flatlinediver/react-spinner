@@ -1,5 +1,5 @@
-import { Position } from '@types';
-import { raiseError, CONSTANTS } from '@helpers';
+import { Position } from '../types';
+import { raiseError, CONSTANTS } from '../helpers';
 import { SpeedMapReturn } from './speedMap';
 
 export interface PositionMapReturn
@@ -29,8 +29,8 @@ export const positionMap = (props: SpeedMapReturn): PositionMapReturn => {
   const isCentered: boolean =
     props.center && (props.position === 'fixed' || props.position === 'absolute');
 
-  const top = props.center ? (props.position === 'fixed' ? 'auto' : '50%') : props.top;
-  const left = props.center ? (props.position === 'fixed' ? 'auto' : '50%') : props.left;
+  const top = isCentered ? (props.position === 'fixed' ? 'auto' : '50%') : props.top;
+  const left = isCentered ? (props.position === 'fixed' ? 'auto' : '50%') : props.left;
   return {
     ...props,
     position: props.position,

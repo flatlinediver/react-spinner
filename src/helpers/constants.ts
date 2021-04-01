@@ -1,4 +1,4 @@
-import { DefaultProps, SpeedsOptions } from '@types';
+import { DefaultProps, SpeedsOptions } from '../types';
 
 export const DEFAULT_PROPS: DefaultProps = {
   position: 'static',

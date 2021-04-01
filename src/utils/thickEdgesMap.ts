@@ -1,6 +1,6 @@
-import { Look, SizeWithBorder } from '@types';
+import { Look, SizeWithBorder } from '../types';
 import { ColorsMapReturn } from './colorsMap';
-import { raiseError } from '@helpers';
+import { raiseError } from '../helpers';
 
 export interface SizeMapReturn
   extends Omit<ColorsMapReturn, 'thick' | 'edges'>,

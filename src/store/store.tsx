@@ -1,6 +1,6 @@
 import React, { FC, useContext, createContext } from 'react';
-import { SpinnerProps } from '@types';
-import { CONSTANTS } from '@helpers';
+import { SpinnerProps } from '../types';
+import { CONSTANTS } from '../helpers';
 
 export const Store = createContext<SpinnerProps>(CONSTANTS.DEFAULT_PROPS);
 

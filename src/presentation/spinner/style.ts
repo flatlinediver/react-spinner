@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Wrapper, Speed, Ring } from '@types';
+import { Wrapper, Speed, Ring } from '../../types';
 import { rotate, dash, colorsAnimation } from './animations';
 
 export const Container = styled.div<Wrapper>`

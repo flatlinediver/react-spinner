@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { propsCleaning } from '@utils';
-import { Store, StoreProvider, useStore } from '@store';
-import { Spinner as SpinnerSvg } from '@presentation';
-import { SpinnerProps } from '@types';
-import { CONSTANTS } from '@helpers';
+import { propsCleaning } from './utils';
+import { Store, StoreProvider, useStore } from './store';
+import { Spinner as SpinnerSvg } from './presentation';
+import { SpinnerProps } from './types';
+import { CONSTANTS } from './helpers';
 
 export const DEFAULT_SPINNER_VALUES = CONSTANTS.DEFAULT_PROPS;
 

@@ -59,9 +59,8 @@ describe('Spinner position', () => {
     const { queryByTestId } = render(<Spinner position="fixed" center />);
     expect(queryByTestId('spinner')).toHaveStyle(`
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+            top: auto;
+            left: auto;
         `);
   });
   it('renders spinner with position absolute and centered', () => {
@@ -90,9 +89,8 @@ describe('Spinner position', () => {
     );
     expect(queryByTestId('spinner')).toHaveStyle(`
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+            top: auto;
+            left: auto;
         `);
   });
 });
