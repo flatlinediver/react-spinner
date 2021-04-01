@@ -1,10 +1,11 @@
 import { keyframes } from 'styled-components';
+import { Size, ColorsO } from 'types';
 
 export const rotate = keyframes`
     100% { transform: rotate(360deg); }
 `;
 
-export const dash = (size: number) => keyframes`
+export const dash = (size: Size) => keyframes`
     0% {
         stroke-dasharray: 1, ${size * 6};
         stroke-dashoffset: 0;
@@ -19,7 +20,7 @@ export const dash = (size: number) => keyframes`
     }
 `;
 
-export const colorsAnimation = (colors: string[]) => keyframes`
+export const colorsAnimation = (colors: ColorsO) => keyframes`
     ${colors.map((c: string, i: number) =>
       i === 0 ? `100%, 0% { stroke: ${c}; }` : `${(100 / colors.length) * i}% { stroke: ${c}; }`
     )};

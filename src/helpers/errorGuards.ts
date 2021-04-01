@@ -6,8 +6,8 @@ import {
   Thickness,
   Edges,
   SpeedI,
-  SizeType,
-  PositionType,
+  Size,
+  Position,
   Top,
   Right,
   Left,
@@ -26,8 +26,8 @@ export default (props: SpinnerProps) => {
   guard<Thickness>(typeof props.thick !== 'boolean', 'thick', props.thick);
   guard<Edges>(!props.edges, 'edges', props.edges);
   guard<SpeedI>(!props.speed, 'speed', props.speed);
-  guard<SizeType>(!props.size, 'size', props.size);
-  guard<PositionType>(!props.position, 'position', props.position);
+  guard<Size>(!props.size, 'size', props.size);
+  guard<Position>(!props.position, 'position', props.position);
   guard<Top>(!props.top, 'top', props.top);
   guard<Right>(!props.right, 'right', props.right);
   guard<Left>(!props.left, 'left', props.left);

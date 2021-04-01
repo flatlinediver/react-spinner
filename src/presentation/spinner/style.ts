@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Wrapper, Speed, Ring } from '../../types';
+import { Wrapper, SpeedO, Ring } from '../../types';
 import { rotate, dash, colorsAnimation } from './animations';
 
 export const Container = styled.div<Wrapper>`
@@ -19,7 +19,7 @@ export const Container = styled.div<Wrapper>`
   box-sizing: border-box;
 `;
 
-export const Svg = styled.svg<Speed>`
+export const Svg = styled.svg<{ speed: SpeedO }>`
   box-sizing: border-box;
   animation-name: ${rotate};
   animation-duration: ${({ speed }) => speed}s;
