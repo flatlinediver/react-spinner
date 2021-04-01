@@ -4,9 +4,11 @@ import { rotate, dash, colorsAnimation } from './animations';
 
 export const Container = styled.div<Wrapper>`
   position: ${({ position }) => position};
-  top: ${({ top }) => top};
+  top: ${({ top, isCenteredAndNotStatic, position }) =>
+    isCenteredAndNotStatic ? (position === 'fixed' ? 'auto' : '50%') : top};
   bottom: ${({ bottom }) => bottom};
-  left: ${({ left }) => left};
+  left: ${({ left, isCenteredAndNotStatic, position }) =>
+    isCenteredAndNotStatic ? (position === 'fixed' ? 'auto' : '50%') : left};
   right: ${({ right }) => right};
   width: ${({ size }) => size + 'px'};
   height: ${({ size }) => size + 'px'};
