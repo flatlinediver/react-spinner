@@ -13,7 +13,7 @@ const Spinner: FC<SpinnerProps> = (props) => {
 
   return (
     <ErrorBoundary>
-      <SpinnerSvg props={{ ...theme, ...props }} />
+      <SpinnerSvg props={{ ...DEFAULT_SPINNER_VALUES, ...theme, ...props }} />
     </ErrorBoundary>
   );
 };
