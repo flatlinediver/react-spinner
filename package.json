@@ -10,11 +10,9 @@
     "Styled Components Spinner",
     "react-component"
   ],
-  "files": [
-    "/lib/"
-  ],
+  "types": "/lib/index.d.ts",
   "author": "https://github.com/flatlinediver",
-  "main": "lib/index.js",
+  "main": "/lib/index.js",
   "private": false,
   "repository": {
     "type": "git",
@@ -57,9 +55,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^25.1.0",
     "prettier": "^2.2.1",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "styled-components": "^5.0.1",
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.2",
     "typescript": "^4.2.3",
