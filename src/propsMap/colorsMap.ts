@@ -1,4 +1,4 @@
-import { ColorsI, ColorsO } from 'types';
+import { ColorsI, ColorsO } from '../types';
 import { raiseWarn } from '../helpers/';
 
 const colorsCheck = (colors: ColorsO) => {

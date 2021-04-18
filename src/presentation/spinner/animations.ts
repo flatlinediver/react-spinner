@@ -1,5 +1,5 @@
 import { keyframes } from 'styled-components';
-import { Size, ColorsO } from 'types';
+import { Size, ColorsO } from '../../types';
 
 export const rotate = keyframes`
     100% { transform: rotate(360deg); }
