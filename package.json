@@ -13,6 +13,7 @@
   "types": "/lib/index.d.ts",
   "author": "https://github.com/flatlinediver",
   "main": "/lib/index.js",
+  "files": ["/lib"],
   "private": false,
   "repository": {
     "type": "git",
