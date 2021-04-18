@@ -10,7 +10,6 @@
     "Styled Components Spinner",
     "react-component"
   ],
-  "types": "/lib/index.d.ts",
   "author": "https://github.com/flatlinediver",
   "main": "/lib/index.js",
   "files": [
