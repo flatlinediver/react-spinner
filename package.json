@@ -1,6 +1,6 @@
 {
   "name": "@flatlinediver/react-spinner",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Loading spinner based on Material-UI",
   "license": "MIT",
   "keywords": [
@@ -13,7 +13,9 @@
   "types": "/lib/index.d.ts",
   "author": "https://github.com/flatlinediver",
   "main": "/lib/index.js",
-  "files": ["/lib"],
+  "files": [
+    "/lib"
+  ],
   "private": false,
   "repository": {
     "type": "git",
