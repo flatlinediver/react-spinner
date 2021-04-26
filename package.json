@@ -11,7 +11,7 @@
     "react-component"
   ],
   "author": "https://github.com/flatlinediver",
-  "main": "/lib/index.js",
+  "main": "./lib/index.js",
   "files": [
     "/lib"
   ],
