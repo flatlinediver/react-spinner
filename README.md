@@ -2,7 +2,7 @@
 
 # Loading spinner based on Material-UI
 
-## [Demo](https://react-spinner-demo.vercel.app/)
+## [Demo](https://www.react-spinner.flatlinediver.com)
 
 ## Installation
 
